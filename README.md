@@ -1,31 +1,141 @@
-<<<<<<< HEAD
-# React + Vite
+# React Photo Gallery
 
-## Running the application
+A modern, responsive photo gallery application built with React. Explore beautiful photographs, search for images by photographer, and save your favourite photos to a personal collection.
 
-The gallery uses the Express backend to keep the Pixabay API key private. Start both processes in separate terminals:
+## Features
 
-```bash
-npm start
-npm run dev
+- **Photo Gallery:** Browse a collection of photographs in a responsive grid layout.
+- **Search by Photographer:** Find photos using photographer names.
+- **Favourites:** Add or remove photos from your favourites.
+- **Saved Photos:** View all your favourite photos in a separate section.
+- **Persistent Storage:** Favourites remain saved even after refreshing the page using Local Storage.
+- **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
+- **Loading & Error Handling:** User-friendly loading indicators and error messages.
+- **Modern UI:** Clean dark-themed interface with smooth animations and interactive elements.
+
+## Tech Stack
+
+**Frontend**
+- React.js
+- Vite
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Tailwind CSS (if used in your implementation)
+
+**Backend**
+- Node.js
+- Express.js
+
+**API & Storage**
+- Pixabay API – Fetching photographs.
+- Browser Local Storage – Persisting favourite photos.
+
+## React Concepts Used
+
+- `useState` – Managing component state.
+- `useEffect` – Handling side effects and data fetching.
+- `useReducer` – Managing favourite photo actions.
+- `useCallback` – Optimizing callback functions.
+- `useMemo` – Optimizing filtered photo lists.
+- Custom Hooks – Reusing photo-fetching logic.
+
+## Project Structure
+
+```text
+react-photo-gallery/
+│
+├── client/
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── hooks/
+│       ├── App.jsx
+│       ├── main.jsx
+│       └── index.css
+│
+├── server/
+│   └── index.js
+│
+├── .gitignore
+├── package.json
+└── README.md
 ```
 
-Then open the Vite URL shown in the second terminal. The backend must be running on port `3001` unless the Vite proxy configuration is changed.
+*Note: The structure above is illustrative. Adjust it to match your actual project folders and filenames.*
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Installation and Setup
 
-Currently, two official plugins are available:
+### 1. Clone the repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+git clone https://github.com/Adarshaachary/react-photo-gallery.git
+```
 
-## React Compiler
+### 2. Navigate to the project directory
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+cd react-photo-gallery
+```
 
-## Expanding the Oxlint configuration
+### 3. Install dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-=======
-# react-photo-gallery
->>>>>>> 07224397f3fc52d6f40a5a3f383d8b4d7a63b22c
+```bash
+npm install
+```
+
+If your project has separate frontend and backend dependencies, install those as configured in your project.
+
+### 4. Configure environment variables
+
+Create a `.env` file in the appropriate backend directory and add your Pixabay API key:
+
+```env
+PIXABAY_API_KEY=your_pixabay_api_key
+```
+
+Replace `your_pixabay_api_key` with your actual API key.
+
+**Important:** Never upload your `.env` file or expose your API key publicly.
+
+### 5. Run the application
+
+Use the development commands configured in your `package.json`.
+
+For example, if your project has separate frontend and backend scripts:
+
+```bash
+npm run dev:server
+```
+
+In another terminal:
+
+```bash
+npm run dev:client
+```
+
+Open the local URL displayed by Vite in your browser.
+
+## API
+
+This project uses the [Pixabay API](https://pixabay.com/api/docs/) to retrieve photographs.
+
+The application uses the API to search for photographs and display information such as image previews and photographer names.
+
+## Future Improvements
+
+- Add pagination or infinite scrolling.
+- Add more image categories and filters.
+- Improve image loading performance.
+- Add additional gallery customization options.
+
+## Author
+
+**Adarsh Acharya**
+
+- GitHub: [Adarshaachary](https://github.com/Adarshaachary)
+- LinkedIn: [Adarsh Acharya](https://linkedin.com/in/adarsh-acharya548)
+
+---
+
+If you find this project interesting, feel free to explore the repository!
