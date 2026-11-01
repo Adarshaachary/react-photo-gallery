@@ -1,0 +1,62 @@
+.gallery-page {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1.25rem;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gallery-header h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.gallery-header p {
+  margin-top: 0.5rem;
+  color: #4b5563;
+}
+
+.search-panel {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.search-panel input {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 0.65rem 0.75rem;
+}
+
+.status-message {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.status-message.error {
+  color: #b91c1c;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.photo-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #f3f4f6;
+  aspect-ratio: 4 / 3;
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
